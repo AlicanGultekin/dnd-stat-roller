@@ -1,0 +1,38 @@
+{
+  "name": "stat-roller",
+  "version": "1.0.0",
+  "description": "D&D Character Stat Roller 🎲",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "generateDocs": "./node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+  },
+  "keywords": [
+    "d&d",
+    "dnd",
+    "dungeons",
+    "dragons"
+  ],
+  "author": {
+    "name": "Alican Gultekin",
+    "url": "https://github.com/Vitaefinis"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vitaefinis/dnd-stat-roller.git"
+  },
+  "license": "GPL-3.0-only",
+  "dependencies": {
+    "random-js": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "jest": "^24.9.0",
+    "jsdoc": "^3.6.3",
+    "jsdoc-template": "git+https://github.com/braintree/jsdoc-template.git#master"
+  }
+}

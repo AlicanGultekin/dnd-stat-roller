@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>
+      stat-roller.js - Documentation
+  </title>
+
+  <link href="https://www.braintreepayments.com/images/favicon-ccda0b14.png" rel="icon" type="image/png">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+  <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+  
+
+  
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+  0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+  mixpanel.init("1919205b2da72e4da3b9b6639b444d59");</script>
+  <!-- end Mixpanel -->
+</head>
+
+<body>
+  <svg style="display: none;">
+    <defs>
+      <symbol id="linkIcon" fill="#706d77" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0h24v24H0z" fill="none"/>
+          <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger" class="navicon-button x">
+    <div class="navicon"></div>
+  </label>
+
+  <label for="nav-trigger" class="overlay"></label>
+
+  <div class="top-nav-wrapper">
+    <ul>
+      <li >
+        <a href="index.html">
+          
+            <svg fill="#6D6D6D" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+              <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          
+          
+        </a>
+      </li>
+
+      
+
+    </ul>
+  </div>
+
+  <nav>
+    <h3 class="reference-title">
+      D&D Character Stat Roller 🎲
+    </h3>
+
+    
+      <h3>
+        Resources
+      </h3>
+      
+        <a href="https://anydice.com/articles/4d6-drop-lowest/">4d6 drop lowest</a>
+      
+    
+
+    <h3>Modules</h3><ul><li id="stat-roller-nav"><a href="module-stat-roller.html">stat-roller</a><ul class='methods'><li data-type="method" id="stat-roller-rollNSidedDie-nav"><a href="module-stat-roller.html#.rollNSidedDie">rollNSidedDie</a></li><li data-type="method" id="stat-roller-rollStat-nav"><a href="module-stat-roller.html#.rollStat">rollStat</a></li><li data-type="method" id="stat-roller-rollStats-nav"><a href="module-stat-roller.html#.rollStats">rollStats</a></li><li data-type="method" id="stat-roller-rollStatsAndAutoAssign-nav"><a href="module-stat-roller.html#.rollStatsAndAutoAssign">rollStatsAndAutoAssign</a></li></ul></li><li id="util-nav"><a href="module-util.html">util</a><ul class='methods'><li data-type="method" id="util-ensureNumberOrThrow-nav"><a href="module-util.html#.ensureNumberOrThrow">ensureNumberOrThrow</a></li></ul></li></ul>
+  </nav>
+
+  <div id="main">
+    
+      <h1 class="page-title">
+        stat-roller.js
+      </h1>
+    
+
+    
+      
+
+<section>
+  <article>
+    <pre class="prettyprint source linenums"><code>/**
+ * Stat Roller module
+ * @module stat-roller
+ */
+
+const util = require('./util');
+const { Random, MersenneTwister19937 } = require('random-js');
+const random = new Random(MersenneTwister19937.autoSeed());
+
+/**
+ * Rolls N sided die
+ * minimum sides is 2 (coin toss)
+ *
+ * @param {number} [n=6] Number of sides
+ * @returns {number} Roll result
+ */
+exports.rollNSidedDie = function(n = 6) {
+  util.ensureNumberOrThrow(
+    n,
+    'A number equal to or greater than 2 should be passed',
+    n >= 2
+  );
+
+  return random.integer(1, n);
+};
+
+/**
+ * Rolls dice for a given stat name
+ * Out of all rolls, the lowest roll will be discarded
+ *
+ * @param {number} [numberOfRollsPerStat=4] Number of dice to roll per stat
+ * @param {string} [statName] Name of stat to roll for
+ * @returns {number} Total of rolled dice
+ */
+exports.rollStat = function(numberOfRolls = 4, statName = null) {
+  util.ensureNumberOrThrow(
+    numberOfRolls,
+    'numberOfRolls should be a number greater than or equal to 1',
+    numberOfRolls >= 1
+  );
+
+  let rolls = [];
+
+  for (let die = 1; die &lt;= numberOfRolls; die++) {
+    let roll = exports.rollNSidedDie(6);
+    rolls.push(roll);
+    console.log(
+      `Die ${die} rolled ${roll} ${statName ? `for ${statName}` : ''}`
+    );
+  }
+
+  rolls.sort();
+  console.log(`Discarding ${rolls[0]}`);
+  rolls = rolls.splice(1, rolls.length);
+
+  let total = rolls.reduce((a, b) => a + b, 0);
+  console.log(`Total is ${total}\n`);
+
+  return total;
+};
+
+/**
+ * Rolls a given number of stats
+ * @param {number} [numberOfStatsToRoll=6] Number of stats to roll for
+ * @param {number} [numberOfRollsPerStat=4] Number of dice to roll per stat
+ *
+ * @returns {number[]} An array containing all rolled values
+ */
+exports.rollStats = function(
+  numberOfStatsToRoll = 6,
+  numberOfRollsPerStat = 4
+) {
+  util.ensureNumberOrThrow(
+    numberOfStatsToRoll,
+    'numberOfStatsToRoll should be a number greater than or equal to 1',
+    numberOfStatsToRoll >= 1
+  );
+  util.ensureNumberOrThrow(
+    numberOfRollsPerStat,
+    'numberOfRollsPerStat should be a number greater than or equal to 1',
+    numberOfRollsPerStat >= 1
+  );
+
+  let stats = Array.from(Array(numberOfStatsToRoll).keys());
+  stats = stats.map(() => exports.rollStat(numberOfRollsPerStat));
+
+  console.log(stats.join(', '));
+
+  return stats;
+};
+
+/**
+ * @typedef {Object} Stat
+ * @property {string} name - Name of stat
+ * @property {number} value - Value of stat
+ */
+
+/**
+ * Rolls stats and auto assigns them to strength, dexterity, constitution, intelligence, wisdom, and charisma for a character
+ * @param {number} [numberOfRollsPerStat=4] Number of dice to roll per stat
+ *
+ * @returns {Array.&lt;Stat>} An array objects containing all rolled stat names and their values
+ */
+exports.rollStatsAndAutoAssign = function(numberOfRollsPerStat = 4) {
+  util.ensureNumberOrThrow(
+    numberOfRollsPerStat,
+    'numberOfRollsPerStat should be a number greater than or equal to 1',
+    numberOfRollsPerStat >= 1
+  );
+
+  let stats = [
+    {
+      name: 'STR',
+      value: 0,
+    },
+    {
+      name: 'DEX',
+      value: 0,
+    },
+    {
+      name: 'CON',
+      value: 0,
+    },
+    {
+      name: 'INT',
+      value: 0,
+    },
+    {
+      name: 'WIS',
+      value: 0,
+    },
+    {
+      name: 'CHA',
+      value: 0,
+    },
+  ];
+
+  stats.map(stat => {
+    stat.value = exports.rollStat(numberOfRollsPerStat, stat.name);
+  });
+
+  stats.map(stat => {
+    console.log(`${stat.name} is ${stat.value}`);
+  });
+
+  return stats;
+};
+</code></pre>
+  </article>
+</section>
+
+    
+
+
+  </div>
+
+  <br class="clear">
+
+  <footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+  </footer>
+
+  <script src="scripts/linenumber.js"></script>
+  <script src="scripts/pagelocation.js"></script>
+
+  
+
+</body>
+</html>

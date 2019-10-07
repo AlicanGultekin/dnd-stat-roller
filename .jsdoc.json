@@ -1,0 +1,28 @@
+{
+  "tags": {
+      "allowUnknownTags": true,
+      "dictionaries": ["jsdoc"]
+  },
+  "source": {
+      "include": ["src", "package.json", "README.md"],
+      "includePattern": ".js$",
+      "excludePattern": "(node_modules/|docs)"
+  },
+  "plugins": [
+      "plugins/markdown"
+  ],
+  "templates": {
+      "referenceTitle": "D&D Character Stat Roller 🎲",
+      "disableSort": false,
+      "collapse": false,
+      "resources": {
+        "4d6 drop lowest": "https://anydice.com/articles/4d6-drop-lowest/"
+    }
+  },
+  "opts": {
+      "destination": "./docs/",
+      "encoding": "utf8",
+      "recurse": true,
+      "template": "./node_modules/jsdoc-template"
+  }
+}

@@ -1,4 +1,5 @@
 # Dungeons & Dragons Character Stat Roller 🎲
+[![CircleCI](https://circleci.com/gh/Vitaefinis/dnd-stat-roller/tree/master.svg?style=svg)](https://circleci.com/gh/Vitaefinis/dnd-stat-roller/tree/master)
 
 ## Steps to run
 

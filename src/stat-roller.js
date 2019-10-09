@@ -53,7 +53,7 @@ exports.rollStat = function(numberOfRolls = 4, statName = null) {
   console.log(`Discarding ${rolls[0]}`);
   rolls = rolls.splice(1, rolls.length);
 
-  let total = rolls.reduce((a, b) => a + b, 0);
+  let total = rolls.sum();
   console.log(`Total is ${total}\n`);
 
   return total;
@@ -83,8 +83,9 @@ exports.rollStats = function(
 
   let stats = Array.from(Array(numberOfStatsToRoll).keys());
   stats = stats.map(() => exports.rollStat(numberOfRollsPerStat));
+  console.log(`Rolls: ${stats.join()}\nTotal: ${stats.sum()}`);
 
-  console.log(stats.join(', '));
+  util.printStandardArrayComparison();
 
   return stats;
 };
@@ -135,13 +136,18 @@ exports.rollStatsAndAutoAssign = function(numberOfRollsPerStat = 4) {
     },
   ];
 
+  let total = 0;
   stats.map(stat => {
     stat.value = exports.rollStat(numberOfRollsPerStat, stat.name);
+    total += stat.value;
   });
 
   stats.map(stat => {
-    console.log(`${stat.name} is ${stat.value}`);
+    console.log(`${stat.name}: ${stat.value}`);
   });
+  console.log(`Total: ${total}`);
+
+  util.printStandardArrayComparison();
 
   return stats;
 };

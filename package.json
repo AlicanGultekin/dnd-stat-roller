@@ -9,7 +9,6 @@
     "coverage": "jest --coverage",
     "generate-docs": "./node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
     "generate-md-docs": "jsdoc2md src/*.js > docs/api.md"
-
   },
   "keywords": [
     "d&d",

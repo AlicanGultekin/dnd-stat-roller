@@ -82,7 +82,7 @@
       
     
 
-    <h3>Modules</h3><ul><li id="stat-roller-nav"><a href="module-stat-roller.html">stat-roller</a><ul class='methods'><li data-type="method" id="stat-roller-rollNSidedDie-nav"><a href="module-stat-roller.html#.rollNSidedDie">rollNSidedDie</a></li><li data-type="method" id="stat-roller-rollStat-nav"><a href="module-stat-roller.html#.rollStat">rollStat</a></li><li data-type="method" id="stat-roller-rollStats-nav"><a href="module-stat-roller.html#.rollStats">rollStats</a></li><li data-type="method" id="stat-roller-rollStatsAndAutoAssign-nav"><a href="module-stat-roller.html#.rollStatsAndAutoAssign">rollStatsAndAutoAssign</a></li></ul></li><li id="util-nav"><a href="module-util.html">util</a><ul class='methods'><li data-type="method" id="util-ensureNumberOrThrow-nav"><a href="module-util.html#.ensureNumberOrThrow">ensureNumberOrThrow</a></li></ul></li></ul>
+    <h3>Modules</h3><ul><li id="stat-roller-nav"><a href="module-stat-roller.html">stat-roller</a><ul class='methods'><li data-type="method" id="stat-roller-rollNSidedDie-nav"><a href="module-stat-roller.html#.rollNSidedDie">rollNSidedDie</a></li><li data-type="method" id="stat-roller-rollStat-nav"><a href="module-stat-roller.html#.rollStat">rollStat</a></li><li data-type="method" id="stat-roller-rollStats-nav"><a href="module-stat-roller.html#.rollStats">rollStats</a></li><li data-type="method" id="stat-roller-rollStatsAndAutoAssign-nav"><a href="module-stat-roller.html#.rollStatsAndAutoAssign">rollStatsAndAutoAssign</a></li></ul></li><li id="util-nav"><a href="module-util.html">util</a><ul class='methods'><li data-type="method" id="util-ensureNumberOrThrow-nav"><a href="module-util.html#.ensureNumberOrThrow">ensureNumberOrThrow</a></li><li data-type="method" id="util-printStandardArrayComparison-nav"><a href="module-util.html#.printStandardArrayComparison">printStandardArrayComparison</a></li></ul></li></ul>
   </nav>
 
   <div id="main">
@@ -102,9 +102,9 @@
  * @module util
  */
 
- /**
+/**
  * Ensures a value is a number or throws
- * 
+ *
  * @param value Value to be tested
  * @param {string} errorMessage Error message to be thrown if value is not a number
  * @param {Boolean} [condition=null] Optional condition check
@@ -114,7 +114,28 @@ exports.ensureNumberOrThrow = function(value, errorMessage, condition = null) {
   if (typeof value !== 'number' || condition === false) {
     throw new TypeError(errorMessage);
   }
-}</code></pre>
+};
+
+/**
+ * Sums numbers in an array
+ *
+ * @param {number[]} Array of numbers
+ * @returns {number} Sum of the numbers in an array
+ */
+Array.prototype.sum = function() {
+  return this.reduce((a, b) => a + b, 0);
+};
+
+const standardArray = [15, 14, 13, 12, 10, 8];
+const standardArrayTotal = standardArray.sum();
+/**
+ * Prints D&amp;D 5e standard stat array and its sum to the console
+ *
+ */
+exports.printStandardArrayComparison = function() {
+    console.log(`\nvs\nStandard Array: ${standardArray}\nTotal: ${standardArrayTotal}\n`);
+};
+</code></pre>
   </article>
 </section>
 

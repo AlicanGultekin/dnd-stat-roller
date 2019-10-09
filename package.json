@@ -7,7 +7,8 @@
     "start": "node .",
     "test": "jest",
     "coverage": "jest --coverage",
-    "generateDocs": "./node_modules/.bin/jsdoc --configure .jsdoc.json --verbose"
+    "generate-docs": "./node_modules/.bin/jsdoc --configure .jsdoc.json --verbose",
+    "generate-md-docs": "jsdoc2md src/*.js > docs/api.md"
   },
   "keywords": [
     "d&d",
@@ -33,6 +34,7 @@
     "eslint-plugin-import": "^2.18.2",
     "jest": "^24.9.0",
     "jsdoc": "^3.6.3",
-    "jsdoc-template": "git+https://github.com/braintree/jsdoc-template.git#master"
+    "jsdoc-template": "git+https://github.com/braintree/jsdoc-template.git#master",
+    "jsdoc-to-markdown": "^5.0.1"
   }
 }

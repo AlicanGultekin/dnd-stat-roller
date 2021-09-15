@@ -21,9 +21,9 @@ jobs:
 
     steps:
     - uses: AlicanGultekin/labeler
-        with:
-          configuration-path: .github/config/pr-labeler.yml
-          sync-labels: true
+      with:
+        configuration-path: .github/config/pr-labeler.yml
+        sync-labels: true
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1

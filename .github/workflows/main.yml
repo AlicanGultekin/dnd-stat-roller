@@ -30,5 +30,6 @@ jobs:
     steps:
       - uses: AlicanGultekin/labeler
         with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: .github/config/pr-labeler.yml
           sync-labels: true

@@ -7,11 +7,10 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
+    types: [opened, synchronize, prereleased, edited]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,13 +19,19 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: AlicanGultekin/labeler
-        with:
-          configuration-path: .github/config/pr-labeler.yml
-          sync-labels: true
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: npm i
+    - run: npm i -g jest
     - run: npm test
+  add_labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: AlicanGultekin/labeler@v3
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/config/pr-labeler.yml
+          sync-labels: true

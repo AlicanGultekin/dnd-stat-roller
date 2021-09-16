@@ -30,7 +30,7 @@ jobs:
   add_labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: AlicanGultekin/labeler@v3
+      - uses: AlicanGultekin/labeler@v3.1-alpha
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: .github/config/pr-labeler.yml
